@@ -9,10 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.54.0",
+    "@supabase/auth-helpers-nextjs": "^0.7.2",
+    "@supabase/auth-ui-react": "^0.4.2",
+    "@supabase/supabase-js": "^2.24.0",
+    "dotenv": "^16.1.4",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
+    "react-router-dom": "^6.12.1",
+    "react-spinners": "^0.13.8",
+    "stripe": "^12.9.0"
   }
 }

@@ -1,0 +1,45 @@
+.Course-dropdown {
+  font-family: Arial, sans-serif;
+}
+
+.Course-item {
+  margin-bottom: 16px;
+}
+
+.Course-question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 12px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Course-question:hover {
+  background-color: #ebebeb;
+}
+
+.Course-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Course-question.active .Course-icon {
+  transform: rotate(45deg);
+}
+
+.Course-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.Course-answer.active {
+  max-height: 200px;
+  transition: max-height 0.3s ease-in-out;
+  padding: 12px;
+  background-color: #a9d4e2;
+  border-radius: 4px;
+}

@@ -1,0 +1,44 @@
+.course-card {
+    display: flex;
+    background-color: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  
+  .thumbnail-container {
+    flex-shrink: 0;
+    width: 246px;
+    height: 138px;
+    position: relative;
+  }
+  
+  .thumbnail-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 16px;
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #333;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+  }
+  
+  

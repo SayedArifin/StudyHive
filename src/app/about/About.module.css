@@ -1,0 +1,47 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.course {
+  margin-bottom: 40px;
+}
+
+.course h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  padding-top: 2.5em;
+}
+
+.course img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.course ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio for video */
+  margin-bottom: 20px;
+}
+
+
+.container h1 {
+  
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}

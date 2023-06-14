@@ -1,0 +1,46 @@
+
+
+.footer {
+  background-color: #000000;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.footer.social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer.social-icons a:hover {
+  color: #f00202;
+ 
+}
+
+.footer-text p {
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-text p a {
+  color: #fefefe;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-text p a:hover {
+  color: #000;
+}
