@@ -1,6 +1,5 @@
-import { usePathname } from "next/navigation";
 import Navbar from "../../components/Navbar";
-import Footer from "../../components/footer";
+import Footer from "../../components/Footer";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
