@@ -1,4 +1,3 @@
-"use client";
 import { usePathname } from "next/navigation";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
@@ -14,14 +13,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const path = usePathname();
-
   return (
     <html lang="en">
       <body className={inter.className}>
-        {path !== "/login" && <Navbar />}
+        <Navbar />
         {children}
-        {path !== "/login" && <Footer />}
+        <Footer />
       </body>
     </html>
   );

@@ -1,10 +1,15 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./footer.css";
 
+import { usePathname } from "next/navigation";
+
 const Footer = () => {
-  return (
+  const path = usePathname();
+
+  return path === "/login" ? null : (
     <div className="footer">
       <div className="footer social-icons">
         <Link href="https://www.facebook.com">
@@ -25,5 +30,4 @@ const Footer = () => {
     </div>
   );
 };
-
 export default Footer;

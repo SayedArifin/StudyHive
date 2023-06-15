@@ -2,11 +2,13 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { useRouter } from "next/navigation";
+
 import { supabase } from "@/app/middleware";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [session, setSession] = useState(null);
+  const path = usePathname();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -26,7 +28,7 @@ const Navbar = () => {
     const { error } = await supabase.auth.signOut();
   };
 
-  return (
+  return path === "/login" ? null : (
     <nav className="nav">
       <div className="nav-logo">
         <Link href="/">StudyHive!</Link>
