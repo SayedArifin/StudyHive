@@ -107,7 +107,7 @@ const Pricing = () => {
               {`You have an active subscription in ${session.user.email}`}
             </h1>
             <p className={style["pricing-subscriber"]}>
-              It's time for Study. Browse our all course from
+              Its time for Study. Browse our all course from
               <a
                 href="/course"
                 style={{ color: "blue", textDecoration: "none" }}
