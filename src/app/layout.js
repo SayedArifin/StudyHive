@@ -1,5 +1,5 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
 import "./globals.css";

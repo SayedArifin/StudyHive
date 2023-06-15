@@ -32,6 +32,7 @@ const Navbar = () => {
         <Link href="/">StudyHive!</Link>
       </div>
       <div className="nav-link">
+        {session ? <Link href="/profile">Profile</Link> : null}
         <Link href="/about">Course Outline</Link>
         <Link href="/pricing">Pricing</Link>
         <Link href="/login">

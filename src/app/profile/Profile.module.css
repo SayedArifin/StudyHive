@@ -1,0 +1,167 @@
+.contentProfilePage {
+    margin: 1em auto;
+    width: 44.23em;
+    height: 71vh;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: 0.1em solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 1em;
+  }
+  
+  .profileUserPage .imgUserProfile {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .profileUserPage .imgUserProfile .profileBgHome {
+    border-bottom: 0.2em solid #f5f5f5;
+    width: 44.23em;
+    height: 16em;
+  }
+  
+  .profileUserPage .imgUserProfile .avatar {
+    margin: 0 auto;
+    background: #fff;
+    width: 7em;
+    height: 7em;
+    padding: 0.25em;
+    border-radius: 0.4em;
+    margin-top: -10em;
+    box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.35);
+  }
+  
+  .profileUserPage button  {
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    background: #3498db;
+    border: 1px solid #2487c9;
+    color: #fff;
+    outline: none;
+    border-radius: 0 0.6em 0.6em 0;
+    padding: 0.8em;
+  }
+ 
+  
+  .profileUserPage button:hover {
+    background: #51a7e0;
+    transition: background 0.2s ease-in-out;
+    border: 1px solid #2487c9;
+  }
+  
+  .userProfileData,
+  .descriptionProfile {
+    text-align: center;
+    padding: 0 1.5em;
+  }
+  
+  .userProfileData h1 {
+    font-family: 'Lato', sans-serif;
+    margin-top: 0.35em;
+    color: #292f33;
+    margin-bottom: 0;
+  }
+  
+  .userProfileData p {
+    font-family: 'Lato', sans-serif;
+    color: #8899a6;
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  .descriptionProfile {
+    color: #75787b;
+    font-size: 0.98em;
+  }
+  
+  .dataUser {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 100.15%;
+  }
+  
+  .dataUser li {
+    margin: 0;
+    padding: 0;
+    width: 33.33334%;
+    display: table-cell;
+    text-align: center;
+    border-left: 0.1em solid transparent;
+  }
+  
+  .dataUser li:first-child {
+    border-left: 0;
+  }
+  
+  .dataUser li:first-child a {
+    border-bottom-left-radius: 0.3rem;
+  }
+  
+  .dataUser li:last-child a {
+    border-bottom-right-radius: 0.3rem;
+  }
+  
+  .dataUser li a,
+  .dataUser li strong {
+    display: block;
+  }
+  
+  .dataUser li a {
+    background-color: #f7f7f7;
+    border-top: 1px solid rgba(242, 242, 242, 0.5);
+    border-bottom: 0.2em solid #f7f7f7;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(255, 255, 255, 0.4);
+    padding: 0.93em 0;
+    color: #46494c;
+  }
+  
+  .dataUser li a strong,
+  .dataUser li a span {
+    font-weight: 600;
+    line-height: 1;
+  }
+  
+  .dataUser li a strong {
+    font-size: 2em;
+  }
+  
+  .dataUser li a span {
+    color: #717a7e;
+  }
+  
+  .dataUser li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-bottom: 0.2em solid #3498db;
+    color: #3498db;
+  }
+  
+  .dataUser li a:hover span {
+    color: #3498db;
+  }
+  
+  .footer h4 {
+    display: block;
+    text-align: center;
+    clear: both;
+    font-family: 'Coda', sans-serif;
+    color: #566965;
+    line-height: 6;
+    font-size: 1em;
+  }
+  
+  .footer h4 a {
+    text-decoration: none;
+    color: #3498db;
+  }
+  
