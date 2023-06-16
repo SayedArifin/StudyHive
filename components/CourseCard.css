@@ -1,3 +1,12 @@
+.course-card-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:  #000099;
+  color: #fff;
+  text-decoration: none;
+  border-radius: .5em 0 1.5em 0;
+}
+
 .course-card {
     display: flex;
     background-color: #fefefe;

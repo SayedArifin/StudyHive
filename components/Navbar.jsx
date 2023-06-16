@@ -2,6 +2,8 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { supabase } from "@/app/middleware";
 import { usePathname } from "next/navigation";
@@ -9,6 +11,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [session, setSession] = useState(null);
   const path = usePathname();
+  const notify = () => toast("You just logged Out !");
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -26,6 +29,7 @@ const Navbar = () => {
 
   const logout = async () => {
     const { error } = await supabase.auth.signOut();
+    notify();
   };
 
   return path === "/login" ? null : (
@@ -37,6 +41,7 @@ const Navbar = () => {
         {session ? <Link href="/profile">Profile</Link> : null}
         <Link href="/about">Course Outline</Link>
         <Link href="/pricing">Pricing</Link>
+
         <Link href="/login">
           {session ? (
             <button onClick={logout} className="nav-button">

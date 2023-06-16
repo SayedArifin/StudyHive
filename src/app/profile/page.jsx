@@ -4,6 +4,8 @@ import styles from "./Profile.module.css";
 import { supabase } from "../middleware";
 import Stripe from "stripe";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 const Profile = () => {
   const [session, setSession] = useState(null);
@@ -14,6 +16,18 @@ const Profile = () => {
   const [nextPayload, setNextPayload] = useState(0);
   const [currentPayload, setCurrentPayload] = useState(0);
   const [subsId, setSubsId] = useState(0);
+
+  const notify = () =>
+    toast.warn("🦄 Wow so easy!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
 
   const formatUnixTimestamp = (timestamp) => {
     const dt = new Date(timestamp * 1000);
@@ -31,6 +45,7 @@ const Profile = () => {
     if (confirmed) {
       try {
         await stripe.subscriptions.cancel(subsId);
+        notify();
       } catch (error) {
         // Handle error
       }
@@ -126,8 +141,6 @@ const Profile = () => {
     }
   }, [session, userId]); // Add userId as a dependency
 
-  useEffect(() => {});
-
   return (
     <div className={styles.contentProfilePage}>
       <div className={styles.profileUserPage + " card"}>
@@ -144,17 +157,7 @@ const Profile = () => {
           />
         </div>
         {status === "Not Subscribed" ? (
-          <Link
-            style={{
-              display: "inline-block",
-              padding: "10px 20px",
-              backgroundColor: " #000099",
-              color: "#fff",
-              textDecoration: "none",
-              borderRadius: ".5em 0 1.5em 0",
-            }}
-            href="/pricing"
-          >
+          <Link className={styles.courseCardLink} href="/pricing">
             Subscribe Now
           </Link>
         ) : (

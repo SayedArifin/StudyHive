@@ -31,16 +31,8 @@ export default function App() {
           supabaseClient={supabase}
           appearance={{
             theme: ThemeSupa,
-            // variables: {
-            //   default: {
-            //     colors: {
-            //       brand: "#404040",
-            //       brandAccent: "#22c55e",
-            //     },
-            //   },
-            // },
           }}
-          providers={["google", "facebook", "twitter"]}
+          providers={["google"]}
         />
       </div>
     );

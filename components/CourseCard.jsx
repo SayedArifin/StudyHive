@@ -14,23 +14,7 @@ const CourseCard = ({ title, description, thumbnail, href }) => {
         <h2>{title}</h2>
         <p>{description}</p>
         {subsState ? (
-          <Link
-            href={href}
-            style={{
-              display: "inline-block",
-              padding: "10px 20px",
-              backgroundColor: " #000099",
-              color: "#fff",
-              textDecoration: "none",
-              borderRadius: ".5em 0 1.5em 0",
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.backgroundColor = "#000";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.backgroundColor = "#000099";
-            }}
-          >
+          <Link href={href} className="course-card-link">
             Enroll Now
           </Link>
         ) : (
