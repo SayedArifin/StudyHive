@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import styles from "./About.module.css";
 import useSubsState from "../../../components/ActiveSubscription";
 import Link from "next/link";

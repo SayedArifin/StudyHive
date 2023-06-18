@@ -4,11 +4,8 @@ import "./home.css";
 import hero from "../../public/heroSvg.svg";
 import Link from "next/link";
 import CourseList from "../../components/CourseList";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
-  const notify = () => toast("button clicked!");
   return (
     <>
       <div className="container">

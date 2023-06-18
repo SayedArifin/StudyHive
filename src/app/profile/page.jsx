@@ -140,9 +140,12 @@ const Profile = () => {
     }
   }, [session, userId]);
   useEffect(() => {
-    // Reload the page when component mounts
-    location.reload(true);
-  }, []);
+    if (!pageReloaded) {
+      // Reload the page only once when the component mounts
+      setPageReloaded(true);
+      location.reload(true);
+    }
+  }, [pageReloaded]);
 
   return (
     <div className={styles.contentProfilePage}>
