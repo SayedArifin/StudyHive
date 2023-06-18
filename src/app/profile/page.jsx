@@ -139,6 +139,10 @@ const Profile = () => {
       fetchSubscriptions(userId);
     }
   }, [session, userId]);
+  useEffect(() => {
+    // Reload the page when component mounts
+    location.reload(true);
+  }, []);
 
   return (
     <div className={styles.contentProfilePage}>
