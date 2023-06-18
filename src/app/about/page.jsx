@@ -106,6 +106,9 @@ const About = () => {
                 transition: "background 0.2s ease-in-out",
                 textDecoration: "none",
               }}
+              onMouseEnter={{
+                background: "black",
+              }}
               href="/course"
             >
               Open this course
