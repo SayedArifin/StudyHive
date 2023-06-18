@@ -22,7 +22,7 @@ export default function Home() {
             </div>
             <div className="content-button">
               <Link href="#course">
-                <button onClick={notify}>Browse Our Courses</button>
+                <button>Browse Our Courses</button>
               </Link>
             </div>
           </div>
