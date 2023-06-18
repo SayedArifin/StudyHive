@@ -11,30 +11,14 @@ const CourseCard = ({ title, description, thumbnail, href }) => {
         <img src={thumbnail} alt="Course Thumbnail" />
       </div>
       <div className="content">
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h2 className="CourseCard-h2">{title}</h2>
+        <p className="CourseCard-p">{description}</p>
         {subsState ? (
           <Link href={href} className="course-card-link">
             Enroll Now
           </Link>
         ) : (
-          <Link
-            href="/pricing"
-            style={{
-              display: "inline-block",
-              padding: "10px 20px",
-              backgroundColor: "#000099",
-              color: "#fff",
-              textDecoration: "none",
-              borderRadius: ".5em 0 1.5em 0",
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.backgroundColor = "#000";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.backgroundColor = "#000099";
-            }}
-          >
+          <Link href="/pricing" className="course-card-link">
             Subscribe Now
           </Link>
         )}

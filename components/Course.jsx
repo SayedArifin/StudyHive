@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "./CourseDropdown.css"; // Import your CSS file for styling
+import "./CourseDropdown.css"; //
 
 const CourseDropdown = ({ questions }) => {
   const [activeIndex, setActiveIndex] = useState(null);

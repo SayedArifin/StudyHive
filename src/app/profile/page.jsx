@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styl from "./Profile.module.css";
+
 import { supabase } from "../middleware";
 import Stripe from "stripe";
 
@@ -138,12 +139,10 @@ const Profile = () => {
       fetchSubscriptions(userId);
     }
   }, [session, userId]);
-  const reload = () => location.reload(true);
 
   return (
     <div className={styl.contentProfilePage}>
-      <div className={styl.profileUserPage + " card"}>
-        {reload}
+      <div className={styl.profileUserPage + " ccard"}>
         <div className={styl.imgUserProfile}>
           <img
             className={styl.profileBgHome}

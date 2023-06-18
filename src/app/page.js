@@ -8,9 +8,9 @@ import CourseList from "../../components/CourseList";
 export default function Home() {
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.Homecontainer}>
         <div className={styles.svgBg}></div>
-        <div className={styles.content}>
+        <div className={styles.Homecontent}>
           <div className={styles.contentHero}>
             <h1>Unlock the Power of Coding with Our Up-to-Date Courses</h1>
             <div className={styles.contentSecondaryText}>

@@ -38,7 +38,8 @@ const courses = [
       "Cloud Computing for Web Development",
       "Deployment",
     ],
-    videoUrl: "https://www.youtube.com/embed/AjWfY7SnMBI",
+    videoUrl:
+      "https://media.istockphoto.com/id/1411419125/video/over-shoulder-person-using-laptop-computer-online-shopping-for-electronics-wireless-hi-fi.mp4?s=mp4-640x640-is&k=20&c=tHhTF-wZ3Dl7Ix85TMDV0u3_-ESQUEEe5MOoULLc9qg=",
   },
   {
     id: "code",
@@ -54,7 +55,8 @@ const courses = [
       "Swift",
       "Go",
     ],
-    videoUrl: "https://www.youtube.com/embed/AjWfY7SnMBI",
+    videoUrl:
+      "https://media.istockphoto.com/id/1421083158/video/animated-developer-flat-character.mp4?s=mp4-640x640-is&k=20&c=IpsbbDViceSYSOA8hwcTIsvbXHNFEYkvK2SFF9T9fQs=",
   },
   {
     id: "dm",
@@ -70,7 +72,8 @@ const courses = [
       "Online Advertising",
       "Marketing Analytics",
     ],
-    videoUrl: "https://www.youtube.com/embed/AjWfY7SnMBI",
+    videoUrl:
+      "https://media.istockphoto.com/id/1405993999/video/vfx-animated-background-with-virtual-social-media-reality-interconnected-by-internet-into.mp4?s=mp4-640x640-is&k=20&c=Q3nrs4Qg5FKhGlp2cvh25cTZW-PJsVZ79LvtExk_4XA=",
   },
 ];
 
@@ -93,12 +96,12 @@ const About = () => {
             <>
               <h3>Need a preview? Watch this:</h3>
               <iframe
-                width="928"
-                height="522"
+                width="500em"
+                height="300em"
                 src={course.videoUrl}
                 title="Preview Video"
-                // frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                frameBorder="3"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </>
