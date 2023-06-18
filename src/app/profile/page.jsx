@@ -4,8 +4,7 @@ import styles from "./Profile.module.css";
 import { supabase } from "../middleware";
 import Stripe from "stripe";
 import Link from "next/link";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 const Profile = () => {
   const [session, setSession] = useState(null);
@@ -16,18 +15,6 @@ const Profile = () => {
   const [nextPayload, setNextPayload] = useState(0);
   const [currentPayload, setCurrentPayload] = useState(0);
   const [subsId, setSubsId] = useState(0);
-
-  const notify = () =>
-    toast.warn("🦄 Wow so easy!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
 
   const formatUnixTimestamp = (timestamp) => {
     const dt = new Date(timestamp * 1000);
@@ -95,16 +82,17 @@ const Profile = () => {
           const customer = await stripe.customers.list({
             email: session.user.email,
           });
+          const canceledSubscriptions = await stripe.subscriptions.search({
+            query: 'status: "canceled"',
+          });
 
           const trialSubscription = await stripe.subscriptions.search({
             query: `status: 'trialing'`,
           });
-          console.log(trialSubscription.data[0].id);
 
           const activeSubscription = await stripe.subscriptions.search({
             query: `status: 'active'`,
           });
-          console.log(activeSubscription);
 
           for (let i = 0; i < trialSubscription.data.length; i++) {
             if (trialSubscription.data[i].customer === userId) {
@@ -126,6 +114,18 @@ const Profile = () => {
                 activeSubscription.data[i].current_period_start
               );
               setSubsId(activeSubscription.data[i].id);
+              return; // Exit the function if active subscription is found
+            }
+          }
+          for (let i = 0; i < canceledSubscriptions.data.length; i++) {
+            if (canceledSubscriptions.data[i].customer === userId) {
+              setStatus("Canceled");
+              setCreatedAt(canceledSubscriptions.data[i].created);
+              setNextPayload(canceledSubscriptions.data[i].canceled_at);
+              setCurrentPayload(
+                canceledSubscriptions.data[i].current_period_start
+              );
+              setSubsId(canceledSubscriptions.data[i].id);
               return; // Exit the function if active subscription is found
             }
           }
@@ -156,7 +156,7 @@ const Profile = () => {
             alt="avatar"
           />
         </div>
-        {status === "Not Subscribed" ? (
+        {status === "Canceled" ? null : status === "Not Subscribed" ? (
           <Link className={styles.courseCardLink} href="/pricing">
             Subscribe Now
           </Link>
@@ -204,7 +204,11 @@ const Profile = () => {
                   : formatUnixTimestamp(nextPayload)}
               </strong>
               <span>
-                {status === "Trial" ? "Trial End" : "Next Payment Date"}
+                {status === "Canceled"
+                  ? "Canceled At"
+                  : status === "Trial"
+                  ? "Trial Starts"
+                  : "Last Payment"}
               </span>
             </a>
           </li>

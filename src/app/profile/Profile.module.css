@@ -1,16 +1,23 @@
 /* Default styles */
-
 .courseCardLink {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #000099;
-  color: #fff;
+  background-color: #0534f1;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: .5em 0 1.5em 0;
+  border-radius: .5em 0 2em 0;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+}
+.courseCardLink:hover {
+  background-color: #020202;
 }
 
-.courseCardLink:hover {
-  background-color: black;
+.courseCardLink:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4CAF50;
 }
 
 .contentProfilePage {
@@ -64,7 +71,7 @@
 }
 
 .profileUserPage button:hover {
-  background: #51a7e0;
+  background: #0008ff;
   transition: background 0.2s ease-in-out;
   border: 1px solid #2487c9;
 }
