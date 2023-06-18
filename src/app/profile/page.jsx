@@ -14,6 +14,7 @@ const Profile = () => {
   const [nextPayload, setNextPayload] = useState(0);
   const [currentPayload, setCurrentPayload] = useState(0);
   const [subsId, setSubsId] = useState(0);
+  const [pageReloaded, setPageReloaded] = useState(false);
 
   const formatUnixTimestamp = (timestamp) => {
     const dt = new Date(timestamp * 1000);

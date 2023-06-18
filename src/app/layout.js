@@ -4,7 +4,7 @@ import "./globals.css";
 
 import "react-toastify/dist/ReactToastify.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "StudyHive",
