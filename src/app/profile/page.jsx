@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import styles from "./Profile.module.css";
 import { supabase } from "../middleware";
 import Stripe from "stripe";
-import Link from "next/link";
 
 const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 const Profile = () => {
