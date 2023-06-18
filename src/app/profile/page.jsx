@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./Profile.module.css";
+import styl from "./Profile.module.css";
 import { supabase } from "../middleware";
 import Stripe from "stripe";
 
@@ -14,7 +14,6 @@ const Profile = () => {
   const [nextPayload, setNextPayload] = useState(0);
   const [currentPayload, setCurrentPayload] = useState(0);
   const [subsId, setSubsId] = useState(0);
-  const [pageReloaded, setPageReloaded] = useState(false);
 
   const formatUnixTimestamp = (timestamp) => {
     const dt = new Date(timestamp * 1000);
@@ -141,16 +140,16 @@ const Profile = () => {
   }, [session, userId]);
 
   return (
-    <div className={styles.contentProfilePage}>
-      <div className={styles.profileUserPage + " card"}>
-        <div className={styles.imgUserProfile}>
+    <div className={styl.contentProfilePage}>
+      <div className={styl.profileUserPage + " card"}>
+        <div className={styl.imgUserProfile}>
           <img
-            className={styles.profileBgHome}
+            className={styl.profileBgHome}
             src="https://source.unsplash.com/800x600/?study"
             alt="profile background"
           />
           <img
-            className={styles.avatar}
+            className={styl.avatar}
             src="https://source.unsplash.com/800x600/?smile"
             alt="avatar"
           />
@@ -163,16 +162,16 @@ const Profile = () => {
           <button onClick={cancelSubscription}>Cancel Subscription</button>
         )} */}
 
-        <div className={styles.userProfileData}>
+        <div className={styl.userProfileData}>
           <h1>{userEmail}</h1>
           <p>{status}</p>
         </div>
-        <div className={styles.descriptionProfile}>
+        <div className={styl.descriptionProfile}>
           {status === "Not Subscribed"
             ? "You needs to be subscribed"
             : "Its Time for Learn Something new. browse our All courses"}
         </div>
-        <ul className={styles.dataUser}>
+        <ul className={styl.dataUser}>
           <li>
             <a>
               <strong>
