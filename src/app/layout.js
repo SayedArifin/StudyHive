@@ -1,10 +1,9 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import "./globals.css";
+import { Inter } from "next/font/google";
 
-import "react-toastify/dist/ReactToastify.css";
-
-const inter = inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "StudyHive",
