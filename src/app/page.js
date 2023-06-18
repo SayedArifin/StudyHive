@@ -9,24 +9,24 @@ export default function Home() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.svg - bg}></div>
+        <div className={styles.svgBg}></div>
         <div className={styles.content}>
-          <div className={styles.content - hero}>
+          <div className={styles.contentHero}>
             <h1>Unlock the Power of Coding with Our Up-to-Date Courses</h1>
-            <div className={styles.content - secondary - text}>
+            <div className={styles.contentSecondaryText}>
               <p>
                 With our easy subscription model, you can get full access to all
                 of our courses. No need to hassle; we offer a 7-day money-back
                 guarantee.
               </p>
             </div>
-            <div className={styles.content - button}>
+            <div className={styles.contentButton}>
               <Link href="#course">
                 <button>Browse Our Courses</button>
               </Link>
             </div>
           </div>
-          <div className={styles.hero - img}>
+          <div className={styles.heroImg}>
             <Image src={hero} alt="hero" />
           </div>
         </div>
