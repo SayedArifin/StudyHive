@@ -138,10 +138,12 @@ const Profile = () => {
       fetchSubscriptions(userId);
     }
   }, [session, userId]);
+  const reload = () => location.reload(true);
 
   return (
     <div className={styl.contentProfilePage}>
       <div className={styl.profileUserPage + " card"}>
+        {reload}
         <div className={styl.imgUserProfile}>
           <img
             className={styl.profileBgHome}
@@ -154,13 +156,13 @@ const Profile = () => {
             alt="avatar"
           />
         </div>
-        {/* {status === "Canceled" ? null : status === "Not Subscribed" ? (
+        {status === "Canceled" ? null : status === "Not Subscribed" ? (
           <button>
             <a href="/pricing">Subscribe Now</a>
           </button>
         ) : (
           <button onClick={cancelSubscription}>Cancel Subscription</button>
-        )} */}
+        )}
 
         <div className={styl.userProfileData}>
           <h1>{userEmail}</h1>
