@@ -91,7 +91,25 @@ const About = () => {
             ))}
           </ul>
           {subsState ? (
-            <Link href="/course">Open this course</Link>
+            <Link
+              style={{
+                position: "absolute",
+                fontSize: "13px",
+                fontWeight: "bold",
+                cursor: "pointer",
+                background: "#1404f3",
+                border: "1px solid #0b07f9",
+                color: "#fff",
+                outline: "none",
+                borderRadius: "0.5em 0 2em",
+                padding: "1em 2em",
+                transition: "background 0.2s ease-in-out",
+                textDecoration: "none",
+              }}
+              href="/course"
+            >
+              Open this course
+            </Link>
           ) : (
             <>
               <h3>Need a preview? Watch this:</h3>
