@@ -1,29 +1,10 @@
-/* Default styles */
-.courseCardLink {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0534f1;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: .5em 0 2em 0;
-  border: none;
-  transition: background-color 0.3s ease;
-  font-size: 16px;
-  cursor: pointer;
-}
-.courseCardLink:hover {
-  background-color: #020202;
-}
 
-.courseCardLink:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4CAF50;
-}
+
 
 .contentProfilePage {
   margin: 1em auto;
   width: 44.23em;
-  height: 71vh;
+  height: 74vh;
 }
 
 .card {
@@ -62,18 +43,24 @@
   font-weight: bold;
   cursor: pointer;
 
-  background: #3498db;
-  border: 1px solid #2487c9;
+  background: #1404f3;
+  border: 1px solid #0b07f9;
   color: #fff;
   outline: none;
-  border-radius: 0 0.6em 0.6em 0;
-  padding: 0.8em;
+  border-radius: .5em 0 2em 0;
+  padding: 1em 2em ;
 }
 
-.profileUserPage button:hover {
-  background: #0008ff;
+.profileUserPage button:hover,
+.profileUserPage button:focus {
+  background: #000000;
   transition: background 0.2s ease-in-out;
-  border: 1px solid #2487c9;
+  color: white;
+  border: 1px solid #000000;
+}
+.profileUserPage a {
+  text-decoration: none;
+  color: white;
 }
 
 .userProfileData,

@@ -157,9 +157,9 @@ const Profile = () => {
           />
         </div>
         {status === "Canceled" ? null : status === "Not Subscribed" ? (
-          <Link className={styles.courseCardLink} href="/pricing">
-            Subscribe Now
-          </Link>
+          <button>
+            <a href="/pricing">Subscribe Now</a>
+          </button>
         ) : (
           <button onClick={cancelSubscription}>Cancel Subscription</button>
         )}
