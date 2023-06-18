@@ -139,7 +139,7 @@ const Profile = () => {
       // Add condition to ensure userId is available
       fetchSubscriptions(userId);
     }
-  }, [session, userId]); // Add userId as a dependency
+  }, [session, userId]);
 
   return (
     <div className={styles.contentProfilePage}>
@@ -207,7 +207,7 @@ const Profile = () => {
                 {status === "Canceled"
                   ? "Canceled At"
                   : status === "Trial"
-                  ? "Trial Starts"
+                  ? "Trial Ends"
                   : "Last Payment"}
               </span>
             </a>
