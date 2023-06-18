@@ -155,13 +155,13 @@ const Profile = () => {
             alt="avatar"
           />
         </div>
-        {status === "Canceled" ? null : status === "Not Subscribed" ? (
+        {/* {status === "Canceled" ? null : status === "Not Subscribed" ? (
           <button>
             <a href="/pricing">Subscribe Now</a>
           </button>
         ) : (
           <button onClick={cancelSubscription}>Cancel Subscription</button>
-        )}
+        )} */}
 
         <div className={styles.userProfileData}>
           <h1>{userEmail}</h1>
