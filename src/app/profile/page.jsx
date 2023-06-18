@@ -152,7 +152,7 @@ const Profile = () => {
           />
           <img
             className={styles.avatar}
-            src="https://th.bing.com/th/id/R.0fccfed352f5e439d898dde94febde25?rik=pJDXC1Mr6plmIw&pid=ImgRaw&r=0"
+            src="https://source.unsplash.com/800x600/?face"
             alt="avatar"
           />
         </div>
