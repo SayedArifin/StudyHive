@@ -155,22 +155,7 @@
   color: #0d05fa;
 }
 
-.footer h4 {
-  display: block;
-  text-align: center;
-  clear: both;
-  font-family: 'Coda', sans-serif;
-  color: #566965;
-  line-height: 6;
-  font-size: 1em;
-}
 
-.footer h4 a {
-  text-decoration: none;
-  color: #3498db;
-}
-
-/* Mobile responsiveness */
 
 @media screen and (max-width: 600px) {
   .contentProfilePage {
