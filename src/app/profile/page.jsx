@@ -32,7 +32,6 @@ const Profile = () => {
     if (confirmed) {
       try {
         await stripe.subscriptions.cancel(subsId);
-        notify();
       } catch (error) {
         // Handle error
       }
