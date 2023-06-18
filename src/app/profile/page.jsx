@@ -139,13 +139,6 @@ const Profile = () => {
       fetchSubscriptions(userId);
     }
   }, [session, userId]);
-  useEffect(() => {
-    if (!pageReloaded) {
-      // Reload the page only once when the component mounts
-      setPageReloaded(true);
-      location.reload(true);
-    }
-  }, [pageReloaded]);
 
   return (
     <div className={styles.contentProfilePage}>
