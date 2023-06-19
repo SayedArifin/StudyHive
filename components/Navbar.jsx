@@ -45,7 +45,9 @@ const Navbar = () => {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
-      notifyOnLogin();
+      if (session) {
+        notifyOnLogin();
+      }
     });
 
     return () => subscription.unsubscribe();
