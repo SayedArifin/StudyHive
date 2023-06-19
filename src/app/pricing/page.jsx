@@ -37,8 +37,8 @@ const Pricing = () => {
           },
         ],
         mode: "subscription",
-        successUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course`,
-        cancelUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/pricing`,
+        successUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/success`,
+        cancelUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/cancel`,
         customerEmail: session.user.email,
       });
       console.warn(error.message);

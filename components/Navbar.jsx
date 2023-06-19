@@ -11,8 +11,20 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [session, setSession] = useState(null);
   const path = usePathname();
-  const notify = () => {
+  const notifyOnLogout = () => {
     toast.success("You Have Logged Out", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const notifyOnLogin = () => {
+    toast.success("You are Logged in", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -33,6 +45,7 @@ const Navbar = () => {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
+      notifyOnLogin();
     });
 
     return () => subscription.unsubscribe();
@@ -40,7 +53,7 @@ const Navbar = () => {
 
   const logout = async () => {
     const { error } = await supabase.auth.signOut();
-    notify();
+    notifyOnLogout();
   };
 
   return path === "/login" ? null : (

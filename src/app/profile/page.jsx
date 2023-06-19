@@ -37,7 +37,7 @@ const Profile = () => {
     });
   };
   const notifyOnError = () => {
-    toast.success("Your Subscribtion has been Cancelled", {
+    toast.error("Something went wrong , please try again", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -49,7 +49,7 @@ const Profile = () => {
     });
   };
   const notifyOnCancelled = () => {
-    toast.success("Your Subscribtion has been Cancelled", {
+    toast.warn("You have cancelled the process, Subscription still on", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
