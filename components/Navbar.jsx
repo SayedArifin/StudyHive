@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { supabase } from "@/app/middleware";
@@ -11,7 +11,18 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [session, setSession] = useState(null);
   const path = usePathname();
-  const notify = () => toast("You just logged Out !");
+  const notify = () => {
+    toast.success("You Have Logged Out", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {

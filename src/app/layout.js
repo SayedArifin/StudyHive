@@ -2,7 +2,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import "./globals.css";
 import { Inter } from "next/font/google";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "../../components/Toastify";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );
