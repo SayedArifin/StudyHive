@@ -4,6 +4,7 @@ import styl from "./Profile.module.css";
 
 import { supabase } from "../middleware";
 import Stripe from "stripe";
+import { toast } from "react-toastify";
 
 const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 const Profile = () => {
@@ -23,6 +24,42 @@ const Profile = () => {
     const day = dt.getDate().toString().padStart(2, "0");
     return `${year}-${month}-${day}`;
   };
+  const notify = () => {
+    toast.success("Your Subscribtion has been Cancelled", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: 1,
+      theme: "dark",
+    });
+  };
+  const notifyOnError = () => {
+    toast.success("Your Subscribtion has been Cancelled", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: 1,
+      theme: "dark",
+    });
+  };
+  const notifyOnCancelled = () => {
+    toast.success("Your Subscribtion has been Cancelled", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: 1,
+      theme: "dark",
+    });
+  };
 
   const cancelSubscription = async () => {
     // Show confirmation dialog
@@ -32,10 +69,13 @@ const Profile = () => {
     if (confirmed) {
       try {
         await stripe.subscriptions.cancel(subsId);
+        notify();
       } catch (error) {
-        // Handle error
+        notifyOnError();
       }
       location.reload(true);
+    } else {
+      notifyOnCancelled();
     }
   };
 
