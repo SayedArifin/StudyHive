@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const Success = () => {
   useEffect(() => {
     const notifyOnSuccess = () => {
-      toast.success("Payment Successfull, Enjoy our all course", {
+      toast.success("Payment Cancelled", {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
