@@ -45,9 +45,6 @@ const Navbar = () => {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
-      if (session) {
-        notifyOnLogin();
-      }
     });
 
     return () => subscription.unsubscribe();
@@ -57,6 +54,12 @@ const Navbar = () => {
     const { error } = await supabase.auth.signOut();
     notifyOnLogout();
   };
+
+  useEffect(() => {
+    if (session) {
+      notifyOnLogin();
+    }
+  }, [session]);
 
   return path === "/login" ? null : (
     <nav className="nav">
