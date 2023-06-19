@@ -1,5 +1,7 @@
+"use client";
 import { useEffect } from "react";
 import Course from "../course/page";
+import { toast } from "react-toastify";
 
 const Success = () => {
   useEffect(() => {

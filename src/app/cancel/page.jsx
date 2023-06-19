@@ -1,4 +1,7 @@
+"use client";
 import { useEffect } from "react";
+import Pricing from "../pricing/page";
+import { toast } from "react-toastify";
 
 const Success = () => {
   useEffect(() => {
@@ -20,7 +23,7 @@ const Success = () => {
 
   return (
     <div>
-      <Course />
+      <Pricing />
     </div>
   );
 };
