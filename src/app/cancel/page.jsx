@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const Success = () => {
   const notifyOnSuccess = () => {
-    toast.success("Payment Cancelled", {
+    toast.warn("Payment Cancelled", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
