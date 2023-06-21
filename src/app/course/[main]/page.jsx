@@ -3,7 +3,8 @@
 import { usePathname, useRouter } from "next/navigation";
 import CourseDropdown from "../../../../components/Course";
 import useSubsState from "../../../../components/ActiveSubscription";
-import Loading from "../../../../loading";
+import Loading from "../../loading";
+
 const MainCourse = () => {
   const WebDevelopment = [
     {

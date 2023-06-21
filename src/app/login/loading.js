@@ -1,17 +1,13 @@
 import React from "react";
-import { RingLoader } from "react-spinners";
+import style from "./Loading.module.css";
 
 const Loading = () => {
-  const loaderContainerStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-  };
-
   return (
-    <div style={loaderContainerStyle}>
-      <RingLoader color=" #000099" size={80} />
+    <div className={style.body}>
+      <div className={style.loading}>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 };
