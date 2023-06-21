@@ -21,7 +21,7 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.contentButton}>
-              <Link href="#course">
+              <Link href="/course">
                 <button>Browse Our Courses</button>
               </Link>
             </div>
