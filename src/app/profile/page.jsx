@@ -247,7 +247,7 @@ const Profile = () => {
                   ? "Canceled At"
                   : status === "Trial"
                   ? "Trial Ends"
-                  : "Last Payment"}
+                  : "Next Payment Date"}
               </span>
             </a>
           </li>
