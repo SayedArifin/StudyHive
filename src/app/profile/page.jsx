@@ -32,8 +32,8 @@ const Profile = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: 1,
-      theme: "dark",
+      progress: undefined,
+      theme: "light",
     });
   };
   const notifyOnError = () => {
@@ -44,8 +44,8 @@ const Profile = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: 1,
-      theme: "dark",
+      progress: undefined,
+      theme: "light",
     });
   };
   const notifyOnCancelled = () => {
@@ -56,8 +56,8 @@ const Profile = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: 1,
-      theme: "dark",
+      progress: undefined,
+      theme: "light",
     });
   };
 
