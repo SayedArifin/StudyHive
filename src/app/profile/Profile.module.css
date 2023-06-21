@@ -52,7 +52,7 @@
 .profileUserPage button:hover,
 .profileUserPage button:focus {
   background: #000000;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
 }
 
 .profileUserPage a {
