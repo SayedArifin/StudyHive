@@ -12,7 +12,7 @@ const Navbar = () => {
   const [session, setSession] = useState(null);
   const path = usePathname();
   const notifyOnLogout = () => {
-    toast.success("You Have Logged Out", {
+    toast.warn("You Have Logged Out", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -64,7 +64,9 @@ const Navbar = () => {
   return path === "/login" ? null : (
     <nav className="nav">
       <div className="nav-logo">
-        <Link href="/">StudyHive!</Link>
+        <Link className="nav-lg" href="/">
+          StudyHive!
+        </Link>
       </div>
       <div className="nav-link">
         {session ? <Link href="/profile">Profile</Link> : null}

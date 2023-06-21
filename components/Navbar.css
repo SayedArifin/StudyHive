@@ -16,7 +16,7 @@
     text-decoration: none;
     font-size: 1.8em;
     font-family:'Bagel Fat One', cursive;  
-    color: ; 
+    color: blue
 }
 
 .nav-link a:not(:last-child) {
@@ -58,5 +58,16 @@
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.16);
     color: white;
   }
-
  
+  
+  @media (max-width: 767px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link a:not(:last-child) {
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+}

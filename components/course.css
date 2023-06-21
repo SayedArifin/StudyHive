@@ -94,3 +94,11 @@
     transform: scaleX(1);
   }
   
+  /* Mobile styles */
+@media (max-width: 768px) {
+  .slide-container {
+    flex: 0 0 90%;
+   
+  }
+
+}

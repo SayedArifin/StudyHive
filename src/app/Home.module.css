@@ -117,3 +117,33 @@
   left: 0;
   pointer-events: none;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .Homecontainer {
+    display: block;
+    padding: 20px;
+  }
+
+  .Homecontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .contentHero {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: -2em;
+  }
+
+  .heroImg {
+    margin-top: 20px;
+    transform: scale(1.5);
+    margin-left: 1em;
+  }
+}
+
+
+
