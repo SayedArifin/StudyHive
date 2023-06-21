@@ -16,8 +16,8 @@ export default function Home() {
             <div className={styles.contentSecondaryText}>
               <p>
                 With our easy subscription model, you can get full access to all
-                of our courses. No need to hassle; we offer a 7-day money-back
-                guarantee.
+                of our courses. No need to hassle; we offer upto 14-day
+                money-back guarantee.
               </p>
             </div>
             <div className={styles.contentButton}>
