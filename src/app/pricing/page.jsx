@@ -5,6 +5,7 @@ import getStripe from "../../../getStripe";
 import { supabase } from "../middleware";
 import { useRouter } from "next/navigation";
 import useSubsState from "../../../components/ActiveSubscription";
+import Link from "next/link";
 
 const Pricing = () => {
   const [session, setSession] = useState(null);
@@ -108,12 +109,12 @@ const Pricing = () => {
             </h1>
             <p className={style["pricing-subscriber"]}>
               Browse our all course by clicking
-              <a
+              <Link
                 href="/course"
                 style={{ color: "blue", textDecoration: "none" }}
               >
                 {"\u00A0here"}
-              </a>
+              </Link>
             </p>
           </>
         ) : null}
