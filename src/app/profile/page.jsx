@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import styl from "./Profile.module.css";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 import { supabase } from "../middleware";
 import Stripe from "stripe";
@@ -61,14 +63,14 @@ const Profile = () => {
     });
   };
 
-  const submit = () => {
+  const cancelSubscription = () => {
     confirmAlert({
-      title: 'Confirm to Cancel Subscription',
-      message: 'Are you sure you want to cancel your subscription?',
+      title: "Confirm to Cancel Subscription",
+      message: "Are you sure you want to cancel your subscription?",
       buttons: [
         {
-          label: 'Yes',
-          onClick: () async => {
+          label: "Yes",
+          onClick: async () => {
             try {
               await stripe.subscriptions.cancel(subsId);
               notify();
@@ -76,34 +78,58 @@ const Profile = () => {
               notifyOnError();
             }
             location.reload(true);
-          }
+          },
         },
         {
-          label: 'No',
-          onClick: () => notifyOnCancelled();
-        }
-      ]
+          label: "No",
+          onClick: () => notifyOnCancelled(),
+        },
+      ],
     });
   };
 
+  // const submit = () => {
+  //   confirmAlert({
+  //     title: 'Confirm to Cancel Subscription',
+  //     message: 'Are you sure you want to cancel your subscription?',
+  //     buttons: [
+  //       {
+  //         label: 'Yes',
+  //         onClick: () async => {
+  //           try {
+  //             await stripe.subscriptions.cancel(subsId);
+  //             notify();
+  //           } catch (error) {
+  //             notifyOnError();
+  //           }
+  //           location.reload(true);
+  //         }
+  //       },
+  //       {
+  //         label: 'No',
+  //         onClick: () => notifyOnCancelled();
+  //       }
+  //     ]
+  //   });
+  // };
 
-  const cancelSubscription = async () => {
-    // Show confirmation dialog
-    const confirmed = window.confirm(
-      "Are you sure you want to cancel your subscription?"
-    );
-    if (confirmed) {
-      try {
-        await stripe.subscriptions.cancel(subsId);
-        notify();
-      } catch (error) {
-        notifyOnError();
-      }
-      location.reload(true);
-    } else {
-      notifyOnCancelled();
-    }
-  };
+  // const cancelSubscription = async () => {
+  //   // Show confirmation dialog
+  //   const confirmed = window.confirm(
+  //     "Are you sure you want to cancel your subscription?"
+  //   );
+  //   if (confirmed) {
+  //     try {
+  //       await stripe.subscriptions.cancel(subsId);
+  //       notify();
+  //     } catch (error) {
+  //       notifyOnError();
+  //     }
+  //     location.reload(true);
+  //   } else {
+  //     notifyOnCancelled();
+  //   }
+  // };
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
