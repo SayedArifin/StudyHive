@@ -15,7 +15,7 @@ const MainCourse = () => {
   const router = useRouter();
   useEffect(() => {
     document.title = `${title}`;
-  }, []);
+  }, [title]);
   const CoursePage = () => {
     const subsState = useSubsState();
     const category = usePathname();
