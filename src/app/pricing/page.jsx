@@ -6,6 +6,7 @@ import { supabase } from "../middleware";
 import { useRouter } from "next/navigation";
 import useSubsState from "../../../components/ActiveSubscription";
 import Link from "next/link";
+import { pricingPlans } from "../../../api/arrow_api";
 
 const Pricing = () => {
   const [session, setSession] = useState(null);
@@ -47,31 +48,6 @@ const Pricing = () => {
       router.push("/login");
     }
   }
-
-  const pricingPlans = [
-    {
-      imgSrc: "https://i.postimg.cc/26VwFNC8/Student-Discipline-main-image.png",
-      header: "Monthly Plan",
-      features: ["All content available for 30 days", "Trial is not available"],
-      price: "1080 ৳",
-      priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_1,
-    },
-    {
-      imgSrc: "https://i.postimg.cc/QdS5CYc8/R-removebg-preview.png",
-      header: "Half Year Plan",
-      features: ["All contents are available for 6 month", "7 days free trial"],
-      price: "6240 ৳",
-      priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_2,
-    },
-    {
-      imgSrc:
-        "https://i.postimg.cc/3xbRzsgv/procrastinating-employee-flat-color-detailed-character-vector-removebg-preview.png",
-      header: "Yearly Plan",
-      features: ["All contents are available for 1 year", "14 days free trial"],
-      price: "12000 ৳",
-      priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_3,
-    },
-  ];
 
   return (
     <div className={style.background}>

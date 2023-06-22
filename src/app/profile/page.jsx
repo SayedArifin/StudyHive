@@ -88,49 +88,6 @@ const Profile = () => {
     });
   };
 
-  // const submit = () => {
-  //   confirmAlert({
-  //     title: 'Confirm to Cancel Subscription',
-  //     message: 'Are you sure you want to cancel your subscription?',
-  //     buttons: [
-  //       {
-  //         label: 'Yes',
-  //         onClick: () async => {
-  //           try {
-  //             await stripe.subscriptions.cancel(subsId);
-  //             notify();
-  //           } catch (error) {
-  //             notifyOnError();
-  //           }
-  //           location.reload(true);
-  //         }
-  //       },
-  //       {
-  //         label: 'No',
-  //         onClick: () => notifyOnCancelled();
-  //       }
-  //     ]
-  //   });
-  // };
-
-  // const cancelSubscription = async () => {
-  //   // Show confirmation dialog
-  //   const confirmed = window.confirm(
-  //     "Are you sure you want to cancel your subscription?"
-  //   );
-  //   if (confirmed) {
-  //     try {
-  //       await stripe.subscriptions.cancel(subsId);
-  //       notify();
-  //     } catch (error) {
-  //       notifyOnError();
-  //     }
-  //     location.reload(true);
-  //   } else {
-  //     notifyOnCancelled();
-  //   }
-  // };
-
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
