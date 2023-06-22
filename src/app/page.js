@@ -4,8 +4,12 @@ import styles from "./Home.module.css";
 import hero from "../../public/heroSvg.svg";
 import Link from "next/link";
 import CourseList from "../../components/CourseList";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = `StudyHive`;
+  }, []);
   return (
     <>
       <div className={styles.Homecontainer}>
