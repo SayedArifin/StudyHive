@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const Success = () => {
   const notifyOnSuccess = () => {
-    toast.success("Payment Successfull", {
+    toast.success("Payment Successful", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -18,6 +18,9 @@ const Success = () => {
   };
   useEffect(() => {
     notifyOnSuccess();
+  }, []);
+  useEffect(() => {
+    document.title = `Payment Successful`;
   }, []);
 
   return (

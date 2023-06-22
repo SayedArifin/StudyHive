@@ -26,6 +26,9 @@ const Profile = () => {
     const day = dt.getDate().toString().padStart(2, "0");
     return `${year}-${month}-${day}`;
   };
+  useEffect(() => {
+    document.title = `Profile`;
+  }, []);
   const notify = () => {
     toast.success("Your Subscribtion has been Cancelled", {
       position: "bottom-right",

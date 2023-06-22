@@ -8,6 +8,9 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 export default function App() {
   const [session, setSession] = useState(null);
   const router = useRouter();
+  useEffect(() => {
+    document.title = `Login Now`;
+  }, []);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {

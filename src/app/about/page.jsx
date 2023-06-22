@@ -3,8 +3,12 @@ import styles from "./About.module.css";
 import useSubsState from "../../../components/ActiveSubscription";
 import Link from "next/link";
 import { courses_list } from "../../../api/arrow_api";
+import { useEffect } from "react";
 const About = () => {
   const subsState = useSubsState();
+  useEffect(() => {
+    document.title = `Course Outlines`;
+  }, []);
   return (
     <div className={styles.container}>
       {courses_list.map((course) => (

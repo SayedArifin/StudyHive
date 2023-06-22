@@ -19,6 +19,9 @@ const Success = () => {
   useEffect(() => {
     notifyOnSuccess();
   }, []);
+  useEffect(() => {
+    document.title = `Payment Cancelled`;
+  }, []);
 
   return (
     <div>

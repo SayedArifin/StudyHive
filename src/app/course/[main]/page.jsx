@@ -10,6 +10,9 @@ import {
   DigitalMarketing,
 } from "../../../../api/arrow_api";
 const MainCourse = () => {
+  useEffect(() => {
+    document.title = `${title}`;
+  }, []);
   const CoursePage = () => {
     const subsState = useSubsState();
     const category = usePathname();

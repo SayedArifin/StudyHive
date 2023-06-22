@@ -12,6 +12,9 @@ const Pricing = () => {
   const [session, setSession] = useState(null);
   const router = useRouter();
   const subsState = useSubsState();
+  useEffect(() => {
+    document.title = `pricing`;
+  }, []);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
