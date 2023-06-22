@@ -10,9 +10,10 @@ import {
   DigitalMarketing,
 } from "../../../../api/arrow_api";
 import { useEffect, useState } from "react";
+import Loading from "../loading";
 const MainCourse = () => {
   const [title, setTitle] = useState("");
-  const router = useRouter();
+
   useEffect(() => {
     document.title = `${title}`;
   }, [title]);
@@ -41,7 +42,7 @@ const MainCourse = () => {
         </div>
       );
     } else {
-      router.push("/pricing");
+      <Loading />;
     }
   };
 
