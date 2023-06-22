@@ -1,15 +1,18 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import CourseDropdown from "../../../../components/Course";
 import useSubsState from "../../../../components/ActiveSubscription";
-import Loading from "../../loading";
+
 import {
   WebDevelopment,
   Coding,
   DigitalMarketing,
 } from "../../../../api/arrow_api";
+import { useEffect, useState } from "react";
 const MainCourse = () => {
+  const [title, setTitle] = useState("");
+  const router = useRouter();
   useEffect(() => {
     document.title = `${title}`;
   }, []);
@@ -18,17 +21,16 @@ const MainCourse = () => {
     const category = usePathname();
 
     let selectedArray = [];
-    let title;
 
     if (category === "/course/web-development") {
       selectedArray = WebDevelopment;
-      title = "Web Development";
+      setTitle("Web Development");
     } else if (category === "/course/coding") {
       selectedArray = Coding;
-      title = "Coding Bootstrap";
+      setTitle("Coding Bootstrap");
     } else if (category === "/course/Digital-marketing") {
       selectedArray = DigitalMarketing;
-      title = "Digital Marketing";
+      setTitle("Digital Marketing");
     }
 
     if (subsState) {
@@ -39,7 +41,7 @@ const MainCourse = () => {
         </div>
       );
     } else {
-      return <Loading />;
+      router.push("/pricing");
     }
   };
 
