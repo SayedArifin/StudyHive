@@ -1,4 +1,5 @@
-#Project Website for CSE312-Software Development
+# Project Website for CSE312-Software Development
+
 ![Studyhive](https://i.postimg.cc/DwxqW0D2/hom-e.png)
 
 ## Submitted By
@@ -9,11 +10,13 @@
 2. Name: Md Sadek Hossain  
    Roll: 1951CSE00823
 
+## Submitted to Syed Mahmud
+
 ## Project Overview
 
 Name : Studyhive  
 Category : e-Learning  
-live Demo : [CLick here->](https://study-hive.vercel.app/)  
+live Demo : [cLick here->](https://study-hive.vercel.app/)  
 Source Code : [github->](https://github.com/SayedArifin/StudyHive)  
 Inspired from : [`COURSERA`](https://www.coursera.org/), [`UDEMY`](https://www.udemy.com)
 
