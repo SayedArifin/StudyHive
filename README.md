@@ -3,18 +3,18 @@
 
 ## Submitted By
 
-1. Name: Md Sayed Arifin
+1. Name: Md Sayed Arifin  
    Roll: 2052CSE00866
 
-2. Name: Md Sadek Hossain
+2. Name: Md Sadek Hossain  
    Roll: 1951CSE00823
 
 ## Project Overview
 
-Name : Studyhive
-Category : e-Learning
-live Demo : [CLick here->](https://study-hive.vercel.app/)
-Source Code : [github->](https://github.com/SayedArifin/StudyHive)
+Name : Studyhive  
+Category : e-Learning  
+live Demo : [CLick here->](https://study-hive.vercel.app/)  
+Source Code : [github->](https://github.com/SayedArifin/StudyHive)  
 Inspired from : [`COURSERA`](https://www.coursera.org/), [`UDEMY`](https://www.udemy.com)
 
 ## Project Features
