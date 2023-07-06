@@ -207,17 +207,17 @@ const Profile = () => {
             alt="avatar"
           />
         </div>
-        {status === "Canceled" ? null : status === "Not Subscribed" ? (
-          <button>
-            <a href="/pricing">Subscribe Now</a>
-          </button>
-        ) : (
-          <button onClick={cancelSubscription}>Cancel Subscription</button>
-        )}
 
         <div className={styl.userProfileData}>
           <h1>{userEmail}</h1>
           <p>{status}</p>
+          {status === "Canceled" ? null : status === "Not Subscribed" ? (
+            <button>
+              <a href="/pricing">Subscribe Now</a>
+            </button>
+          ) : (
+            <button onClick={cancelSubscription}>Cancel Subscription</button>
+          )}
         </div>
         <div className={styl.descriptionProfile}>
           {status === "Not Subscribed"
