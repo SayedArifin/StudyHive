@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
 }
 
 .svgBg {
@@ -61,6 +62,7 @@
   font-size: 1.2rem;
   cursor: pointer;
   font-weight: 700;
+  z-index: 111;
   
 }
 
@@ -118,7 +120,7 @@
   pointer-events: none;
 }
 
-/* Mobile styles */
+
 @media (max-width: 768px) {
   .Homecontainer {
     display: block;
@@ -135,11 +137,11 @@
   .contentHero {
     text-align: center;
     margin-bottom: 20px;
-    margin-left: -2em;
+    margin-left: -1em;
   }
 
   .heroImg {
-    margin-top: 20px;
+    margin-top: 5em;
     transform: scale(1.5);
     margin-left: 1em;
   }

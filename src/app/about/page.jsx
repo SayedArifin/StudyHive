@@ -44,8 +44,8 @@ const About = () => {
             <>
               <h3>Need a preview? Watch this:</h3>
               <iframe
-                width="500em"
-                height="300em"
+                width="350em"
+                height="200em"
                 src={course.videoUrl}
                 title="Preview Video"
                 frameBorder="3"
