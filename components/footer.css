@@ -44,3 +44,12 @@
 .footer-text p a:hover {
   color: #000;
 }
+
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+  .social-icons {
+    flex-direction: row;
+  }
+}
