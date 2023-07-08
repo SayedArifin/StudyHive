@@ -198,12 +198,12 @@ const Profile = () => {
         <div className={styl.imgUserProfile}>
           <img
             className={styl.profileBgHome}
-            src="https://source.unsplash.com/800x600/?study"
+            src="https://notepd.s3.amazonaws.com/default-cover.png"
             alt="profile background"
           />
           <img
             className={styl.avatar}
-            src="https://source.unsplash.com/800x600/?smile"
+            src="https://www.pngkey.com/png/full/52-522921_kathrine-vangen-profile-pic-empty-png.png"
             alt="avatar"
           />
         </div>
