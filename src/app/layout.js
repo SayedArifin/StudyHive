@@ -20,6 +20,17 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <ToastContainer />
+    <script type="text/javascript">
+    window.onload = (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://chat4site.ai/embedWidget.js?t=' + Math.floor(Date.now());
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s1.setAttribute('widgetId','17390539');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
       </body>
     </html>
   );
